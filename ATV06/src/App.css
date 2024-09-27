@@ -4,3 +4,92 @@
   padding: 2rem;
   text-align: center;
 }
+
+/* Styling for FirstComponent */
+form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+label {
+  font-size: 1.2em;
+  color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;  /* Mantenha o padding para um espaço interno confortável */
+  margin: 10px 0; /* Remover margem inferior de 20px para 10px */
+  border-radius: 4px;
+  border: 1px solid #666666;
+  box-sizing: border-box; /* Adicionado para garantir que o padding não afete a largura total */
+}
+
+button {
+  background-color: #4CAF50;
+  color: rgb(175, 175, 175);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #45a049;
+  color: #333;
+}
+
+p {
+  font-size: 1.5em;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Styling for SecondComponent */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  font-size: 1.2em;
+  color: #555;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+ul li:hover {
+  transform: translateY(-5px);
+}
+
+ul li span {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  form {
+    padding: 10px;
+  }
+
+  ul li {
+    font-size: 1em;
+  }
+}
