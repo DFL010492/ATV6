@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-/* Styling for FirstComponent */
+/* Estilo para o FirstComponent */
 form {
   background-color: #ffffff;
   border-radius: 8px;
@@ -52,7 +52,7 @@ p {
   margin-top: 20px;
 }
 
-/* Styling for SecondComponent */
+/* Estilo para o SecondComponent */
 h1 {
   text-align: center;
   color: #333;
@@ -92,4 +92,31 @@ ul li span {
   ul li {
     font-size: 1em;
   }
+}
+
+/* Estilização do Select */
+select {
+  width: 100px;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  border-radius: 4px;
+  border: 1px solid #666666;
+  font-size: 1em;
+  background-color: #ffffff;
+  color: #333;
+  appearance: none; /* Remove o estilo padrão */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><polygon points="0,0 10,0 5,5" fill="%23666" /></svg>'); /* Adiciona uma seta personalizada */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Ajuste da posição da seta */
+  background-size: 10px; /* Tamanho da seta */
+}
+
+select:hover {
+  border-color: #4CAF50; /* Cor da borda ao passar o mouse */
+}
+
+select:focus {
+  border-color: #4CAF50; /* Cor da borda ao focar */
+  outline: none; /* Remove a borda de foco padrão */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Sombra ao focar */
 }
