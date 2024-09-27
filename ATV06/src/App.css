@@ -96,7 +96,7 @@ ul li span {
 
 /* Estilização do Select */
 select {
-  width: 100px;
+  width: auto;
   padding: 10px;
   margin: 10px 0 20px 0;
   border-radius: 4px;
@@ -104,11 +104,6 @@ select {
   font-size: 1em;
   background-color: #ffffff;
   color: #333;
-  appearance: none; /* Remove o estilo padrão */
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><polygon points="0,0 10,0 5,5" fill="%23666" /></svg>'); /* Adiciona uma seta personalizada */
-  background-repeat: no-repeat;
-  background-position: right 10px center; /* Ajuste da posição da seta */
-  background-size: 10px; /* Tamanho da seta */
 }
 
 select:hover {

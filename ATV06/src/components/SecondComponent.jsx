@@ -9,7 +9,8 @@ function Propt(props) {
 }
 
 const SecondComponent = () => {
-  const [selectedList, setSelectedList] = useState('Filmes');
+  const [selectedList, setSelectedList] = useState(''); // Inicialmente vazio
+
   const [Filmes] = useState([
     { id: 1, nome: 'Duna 2', frase: 'Uma jornada épica no deserto.' },
     { id: 2, nome: 'Star Wars', frase: 'A galáxia muito, muito distante.' },
@@ -62,7 +63,7 @@ const SecondComponent = () => {
       case 'Lutas':
         return Lutas;
       default:
-        return Filmes;
+        return [];
     }
   };
 
@@ -71,25 +72,28 @@ const SecondComponent = () => {
       <div>
         <h1>Escolha uma categoria:</h1>
         <select onChange={(e) => setSelectedList(e.target.value)} value={selectedList}>
+          <option value="">Selecione uma categoria</option> {/* Categoria padrão */}
           <option value="Filmes">Filmes</option>
           <option value="Paises">Países</option>
           <option value="Lutas">Lutas</option>
         </select>
       </div>
       <br />
-      <div>
-        <h1>Lista de {selectedList}</h1>
-        <ul>
-          {getSelectedArray().map((item) => (
-            <Propt
-              key={item.id}
-              nome={selectedItem === item.frase ? item.frase : item.nome}
-              onSelect={(id) => handleSelect(id, getSelectedArray())}
-              id={item.id}
-            />
-          ))}
-        </ul>
-      </div>
+      {selectedList && ( // Renderiza a lista apenas quando uma categoria é selecionada
+        <div>
+          <h1>Lista de {selectedList}</h1>
+          <ul>
+            {getSelectedArray().map((item) => (
+              <Propt
+                key={item.id}
+                nome={selectedItem === item.frase ? item.frase : item.nome}
+                onSelect={(id) => handleSelect(id, getSelectedArray())}
+                id={item.id}
+              />
+            ))}
+          </ul>
+        </div>
+      )}
     </>
   );
 };
